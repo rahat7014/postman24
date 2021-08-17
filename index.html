@@ -1,0 +1,2737 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="assets/img/">
+        <title>Postman24</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/vendors/css/bootstrap.min.css">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <!-- Swiper css -->
+        <link rel="stylesheet" href="assets/vendors/css/swiper-bundle.min.css">
+        <!-- Animate Css -->
+        <link rel="stylesheet" href="assets/vendors/css/animate.min.css">
+        <!-- Ticker Css -->
+        <link rel="stylesheet" href="assets/vendors/css/ticker-style.css">
+        <!-- slick -->
+        <link rel="stylesheet" href="assets/vendors/css/slick.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/vendors/css/style.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="assets/vendors/css/responsive.css">
+    </head>
+    <body onload="initClock()">
+
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div
+                            class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                            <img class="mr-3" src="assets/img/weather2.png" alt="">
+                            <div class="date-update">
+                                <!-- <span>Jun 21, 2021 | Wednesday</span> -->
+                                <!--digital clock start-->
+                                <div class="datetime">
+                                    <div class="date">
+                                        <span id="dayname">Day</span>,
+                                        <span id="month">Month</span>
+                                        <span id="daynum">00</span>,
+                                        <span id="year">Year</span>
+                                    </div>
+                                    <div class="time">
+                                        <span id="hour">00</span>:
+                                        <span id="minutes">00</span>:
+                                        <span id="seconds">00</span>
+                                        <span id="period">AM</span>
+                                    </div>
+                                </div>
+                                <!--digital clock end-->
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 d-flex align-items-center justify-content-md-end justify-content-center">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-bar bg-blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 d-flex align-items-center justify-content-center">
+                            <div class="mini-nav d-none d-sm-block">
+                                <ul>
+                                    <li>
+                                        <a href="#">Become a Member</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            type="button"
+                                            id="model"
+                                            data-toggle="modal"
+                                            data-target="#exampleModal">Subscriber</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">login</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bangladesh News</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                            <div class="search-area">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp"
+                                    placeholder="SEARCH">
+                                <button>
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-middle d-none d-lg-block ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 d-flex align-items-center">
+                            <a href="index.html" class="nav-brand"><img src="assets/img/logo/logo.png"></a>
+                        </div>
+
+                        <div class="col-lg-7 d-flex align-items-center justify-content-center">
+
+                            <div class="ad-area">
+                                <img src="assets/img/ad/ad.gif" class="img-fluid"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-menu">
+                    <div class="container">
+                        <a class="navbar-brand d-block d-lg-none" href="index.html"><img src="assets/img/logo/mb-logo.png"></a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <i class="fas fa-home"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Education</a>
+                                        <a class="dropdown-item" href="#">Travel</a>
+                                        <a class="dropdown-item" href="#">Culture</a>
+                                        <a class="dropdown-item" href="#">Fashion</a>
+                                        <a class="dropdown-item" href="#">Women</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">Trending</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Covid-19</a>
+                                        <a class="dropdown-item" href="#">Disinformation</a>
+                                        <a class="dropdown-item" href="#">War on Science</a>
+                                        <a class="dropdown-item" href="#">Palestine-Isreal</a>
+                                        <a class="dropdown-item" href="#">Syria-War</a>
+                                        <a class="dropdown-item" href="#">Libya-yamen</a>
+                                        <a class="dropdown-item" href="#">Myanmar</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">World</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">America</a>
+                                        <a class="dropdown-item" href="#">UK</a>
+                                        <a class="dropdown-item" href="#">Europe</a>
+                                        <a class="dropdown-item" href="#">Asia</a>
+                                        <a class="dropdown-item" href="#">Bangladesh</a>
+                                        <a class="dropdown-item" href="#">Chine</a>
+                                        <a class="dropdown-item" href="#">Pakistan</a>
+                                        <a class="dropdown-item" href="#">Russia</a>
+                                        <a class="dropdown-item" href="#">India</a>
+                                        <a class="dropdown-item" href="#">Turkey</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">Climate Change</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Global warming</a>
+                                        <a class="dropdown-item" href="#">Ecosystem</a>
+                                        <a class="dropdown-item" href="#">Sustainability</a>
+                                        <a class="dropdown-item" href="#">Carbon Dioxide</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Feature</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Economic</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Opinion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Nutella</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Technology</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Lifestyle</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Project</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">More</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contect us</a>
+                                </li>
+                                <div class="d-block d-sm-none">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Become a Member</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            href="#"
+                                            class="nav-link"
+                                            id="model"
+                                            data-toggle="modal"
+                                            data-target="#exampleModal">Subscriber</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Bangladesh news</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Login</a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="breaking-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex align-items-center breaking-area">
+                        <div class="trending-tittle d-flex align-items-center">
+                            <strong>Trending now</strong>
+                            <div class="trending-animated">
+                                <ul id="js-news" class="js-hidden">
+                                    <li class="news-item">Bangladesh dolor sit amet, consectetur adipisicing elit.</li>
+                                    <li class="news-item">Spondon IT sit amet, consectetur.......</li>
+                                    <li class="news-item">Rem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="ticker-wrap">
+                <marquee>
+                    <div class="ticker">
+
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                            </a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                            </a>
+                        </div>
+                        <div class="ticker__item">
+                            <i class="fab fa-bandcamp vsep"></i>
+                            <a hrf="#">Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24</a>
+                        </div>
+                    </div>
+                </marquee>
+            </div>
+        </section>
+
+        <main>
+            <section class="headline-area">
+                <div class="container">
+                    <div class="row bb">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="lead-news bl">
+                                <figure class="pr-xl-3">
+                                    <div class="img-wrapper">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/head1.png">
+                                        </a>
+                                    </div>
+                                    <a href="#">
+                                        <h3 class="heading">587 arrested on the third day of the strictest restrictions</h3>
+                                        <p class="sub-heading">
+                                            The third day of the ongoing strict lockdown saw increased number of people and
+                                            vehicles on the streets of capital city on Sunday as police made more arrests
+                                            and collected bigger sum of fines
+                                        </p>
+                                    </a>
+                                </figure>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-5 col-lg-8 col-md-8  bl">
+                            <div class="heading-title">
+                                <h4 class="background">Top Heading</h4>
+                            </div>
+
+                            <div class="list-news">
+                                <div class="writters ">
+                                    <a href="#">
+                                        <div class="img-wrapper">
+                                            <img src="assets/img/writters/1.jpg">
+                                        </div>
+                                    </a>
+                                    <div>
+                                        <h3 class="head">
+                                            <a href="#"></a>
+                                            <a href="#">
+                                                PM for greater cooperation between AL, Communist Party of China
+                                            </a>
+                                        </h3>
+
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <p class="title">National</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p class="name">DR. Aysha Siddiqa</p>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="writters ">
+                                    <a href="#">
+                                        <div class="img-wrapper">
+                                            <img src="assets/img/writters/1.jpg">
+                                        </div>
+                                    </a>
+                                    <div>
+                                        <h3 class="head">
+                                            <a href="#"></a>
+                                            <a href="#">
+                                                PM for greater cooperation between AL, Communist Party of China
+                                            </a>
+                                        </h3>
+
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <p class="title">National</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p class="name">DR. Aysha Siddiqa</p>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="writters ">
+                                    <a href="#">
+                                        <div class="img-wrapper">
+                                            <img src="assets/img/writters/1.jpg">
+                                        </div>
+                                    </a>
+                                    <div>
+                                        <h3 class="head">
+                                            <a href="#"></a>
+                                            <a href="#">
+                                                PM for greater cooperation between AL, Communist Party of China
+                                            </a>
+                                        </h3>
+
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <p class="title">National</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p class="name">DR. Aysha Siddiqa</p>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="writters ">
+                                    <a href="#">
+                                        <div class="img-wrapper">
+                                            <img src="assets/img/writters/1.jpg">
+                                        </div>
+                                    </a>
+                                    <div>
+                                        <h3 class="head">
+                                            <a href="#"></a>
+                                            <a href="#">
+                                                PM for greater cooperation between AL, Communist Party of China
+                                            </a>
+                                        </h3>
+
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <p class="title">National</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p class="name">DR. Aysha Siddiqa</p>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-4">
+                            <div class="heading-title">
+                                <h4 class="background">Disinformation</h4>
+                            </div>
+
+                            <div class="disinfo">
+                                <div class="img-wrapper">
+                                    <img class="img-fluid" src="assets/img/magazine/2.jpg">
+
+                                    <div class="dis-infotext">
+                                        <h2>
+                                            Letter from Yerevan : As the clouds of coPlaya hater Associationict fase,
+                                            Creativity offers new people.
+                                        </h2>
+
+                                    </div>
+                                    <div class="btn-area">
+                                        <a href="#">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="grid-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="grid-single">
+                                    <div class="img-wrapper">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-1.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="news-details">
+                                        <div class="cat-name">
+                                            <a href="#">Technology</a>
+                                        </div>
+                                        <h3>
+                                            <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                        </h3>
+                                        <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                            over the years, and there seems to be no way to prevent this...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="grid-single">
+                                    <div class="img-wrapper">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="news-details">
+                                        <div class="cat-name">
+                                            <a href="#">Technology</a>
+                                        </div>
+                                        <h3>
+                                            <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                        </h3>
+                                        <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                            over the years, and there seems to be no way to prevent this...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="grid-single">
+                                    <div class="img-wrapper">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-3.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="news-details">
+                                        <div class="cat-name">
+                                            <a href="#">Technology</a>
+                                        </div>
+                                        <h3>
+                                            <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                        </h3>
+                                        <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                            over the years, and there seems to be no way to prevent this...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="grid-single">
+                                    <div class="img-wrapper">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-4.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="news-details">
+                                        <div class="cat-name">
+                                            <a href="#">Technology</a>
+                                        </div>
+                                        <h3>
+                                            <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                        </h3>
+                                        <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                            over the years, and there seems to be no way to prevent this...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec-3">
+                        <div class="container youtube-area">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="how2 how2-cl4 flex-s-c">
+                                        <h3 class="f1-m-2 cl3 tab01-title">
+                                            Opinion
+                                        </h3>
+                                        <a href="#">See-All</a>
+                                    </div>
+                                    <div class="list-news">
+
+                                        <div class="writters ">
+                                            <!-- <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a> -->
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <!-- <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a> -->
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <!-- <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a> -->
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <!-- <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a> -->
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <!-- <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a> -->
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="writters ">
+                                            <!-- <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a> -->
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 ">
+                                    <div class="row">
+                                        <div class="col-12 ">
+                                            <div class="video-items-active">
+                                                <div class="video-items text-center">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/LxXgR2MplRg"
+                                                        frameborder="0"
+                                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+
+                                                </div>
+                                                <div class="video-items text-center">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/ZP93Px1CqPg"
+                                                        frameborder="0"
+                                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="video-items text-center">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/oN5tDEIUs-U"
+                                                        frameborder="0"
+                                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+
+                                                </div>
+                                                <div class="video-items text-center">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/LnJwH_PZXnM"
+                                                        frameborder="0"
+                                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+
+                                                </div>
+                                                <div class="video-items text-center">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/1arrON9fZ7s"
+                                                        frameborder="0"
+                                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="video-info">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="testmonial-nav text-center">
+                                                    <div class="single-video">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/LxXgR2MplRg"
+                                                            frameborder="0"
+                                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                        <div class="video-intro">
+                                                            <a href="#">Welcotme To The Best Model Winner Contest</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-video">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/ZP93Px1CqPg"
+                                                            frameborder="0"
+                                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                        <div class="video-intro">
+                                                            <a href="#">Welcotme To The Best Model Winner Contest</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-video">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/oN5tDEIUs-U"
+                                                            frameborder="0"
+                                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                        <div class="video-intro">
+                                                            <a href="#">Welcotme To The Best Model Winner Contest</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-video">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/LnJwH_PZXnM"
+                                                            frameborder="0"
+                                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                        <div class="video-intro">
+                                                            <a href="#">Welcotme To The Best Model Winner Contest</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-video">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/1arrON9fZ7s"
+                                                            frameborder="0"
+                                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                        <div class="video-intro">
+                                                            <a href="#">Welcotme To The Best Model Winner Contest</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="grid-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-1.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <div class="cat-name">
+                                                <a href="#">Technology</a>
+                                            </div>
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-2.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <div class="cat-name">
+                                                <a href="#">Technology</a>
+                                            </div>
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-3.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <div class="cat-name">
+                                                <a href="#">Technology</a>
+                                            </div>
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-4.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <div class="cat-name">
+                                                <a href="#">Technology</a>
+                                            </div>
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section class="bannar-news grid-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row lead-area">
+                                                <div class="col-lg-6 order-last order-lg-first">
+                                                    <div class="lead-text">
+                                                        <h3 class="heading">
+                                                            <span>
+                                                                <a href="#">UK</a>
+                                                            </span>
+                                                            <a href="#" class="catagory">Tangail Sal forest dying a slow, preventable death</a>
+                                                        </h3>
+                                                        <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                            over the years, and there seems to be no way to prevent this...</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 order-first order-lg-last">
+                                                    <div class="img-wrapper">
+                                                        <a href="#">
+                                                            <img class="img-fluid" src="assets/img/news-pic/head1.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="grid-single">
+                                                <div class="img-wrapper">
+                                                    <a href="#">
+                                                        <img src="assets/img/news-pic/grid-2.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="news-details">
+                                                    <h3>
+                                                        <span>
+                                                            <a class="catagory" href="#">UK</a>
+                                                        </span>
+                                                        <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                                    </h3>
+                                                    <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate over the years.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="grid-single">
+                                                <div class="img-wrapper">
+                                                    <a href="#">
+                                                        <img src="assets/img/news-pic/grid-2.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="news-details">
+                                                    <h3>
+                                                        <span>
+                                                            <a class="catagory" href="#">UK</a>
+                                                        </span>
+                                                        <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                                    </h3>
+                                                    <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate over the years.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="grid-single">
+                                                <div class="img-wrapper">
+                                                    <a href="#">
+                                                        <img src="assets/img/news-pic/grid-2.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="news-details">
+                                                    <h3>
+                                                        <span>
+                                                            <a class="catagory" href="#">UK</a>
+                                                        </span>
+                                                        <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                                    </h3>
+                                                    <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate over the years.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6 no-pad bl">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-12">
+                                            <div class="grid-single">
+                                                <div class="img-wrapper">
+                                                    <a href="#">
+                                                        <img src="assets/img/news-pic/grid-2.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="news-details">
+                                                    <h3>
+                                                        <span>
+                                                            <a class="catagory" href="#">UK</a>
+                                                        </span>
+                                                        <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                                    </h3>
+                                                    <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate over the years.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-12">
+                                            <div class="grid-single">
+                                                <div class="img-wrapper">
+                                                    <a href="#">
+                                                        <img src="assets/img/news-pic/grid-2.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="news-details">
+                                                    <h3>
+                                                        <span>
+                                                            <a class="catagory" href="#">UK</a>
+                                                        </span>
+                                                        <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                                    </h3>
+                                                    <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate over the years.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="row">
+                                        <!-- <div class="col-xl-12 col-lg-6">
+                                            <div class="bannar-side">
+                                                <div class="bannar-head">
+                                                    <div class="img-wrapper">
+                                                        <a href="#">
+                                                            <img src="assets/img/news-pic/grid-6.jpg">
+                                                        </a>
+                                                    </div>
+                                                    <h3>
+                                                        <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="bannar-sub">
+                                                    <h3>
+                                                        <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="bannar-sub">
+                                                    <h3>
+                                                        <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="bannar-sub">
+                                                    <h3>
+                                                        <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="bannar-sub">
+                                                    <h3>
+                                                        <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="col-xl-12">
+                                            <div class="how2 how2-cl4 flex-s-c mb-3">
+                                                <h3 class="f1-m-2 cl3 tab01-title">
+                                                    Stay Connected
+                                                </h3>
+                                            </div>
+                                            <div class="fb-plug">
+                                                <div id="fb-root"></div>
+                                                <div
+                                                    class="fb-page"
+                                                    data-href="https://www.facebook.com/thepostman24"
+                                                    data-tabs="timeline"
+                                                    data-width=""
+                                                    data-height="100"
+                                                    data-small-header="false"
+                                                    data-adapt-container-width="true"
+                                                    data-hide-cover="false"
+                                                    data-show-facepile="true">
+                                                    <blockquote
+                                                        cite="https://www.facebook.com/thepostman24"
+                                                        class="fb-xfbml-parse-ignore">
+                                                        <a href="https://www.facebook.com/thepostman24">Cineples</a>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                            <div class="social-wedget">
+                                                <a href="#">
+                                                    <img src="assets/img/social/twiter.PNG">
+                                                </a>
+                                            </div>
+                                            <div class="social-wedget">
+                                                <a href="#">
+                                                    <img src="assets/img/social/instagram.PNG">
+                                                </a>
+                                            </div>
+                                            <div class="social-wedget">
+                                                <a href="#">
+                                                    <img src="assets/img/social/linkden.PNG">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="cat-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="how2 how2-cl4 flex-s-c">
+                                        <h3 class="f1-m-2 cl3 tab01-title">
+                                            Writters
+                                        </h3>
+                                        <a href="#">See-All</a>
+                                    </div>
+                                    <div class="list-news">
+                                        <div class="writters ">
+                                            <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a>
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a>
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a>
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a>
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="writters ">
+                                            <a href="#">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/img/writters/1.jpg">
+                                                </div>
+                                            </a>
+                                            <div>
+                                                <h3 class="head">
+                                                    <a href="#"></a>
+                                                    <a href="#">
+                                                        PM for greater cooperation between AL, Communist Party of China
+                                                    </a>
+                                                </h3>
+
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <p class="title">National</p>
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <p class="name">DR. Aysha Siddiqa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="how2 how2-cl4 flex-s-c">
+                                        <h3 class="f1-m-2 cl3 tab01-title">
+                                            Latest
+                                        </h3>
+                                        <a href="#">See-All</a>
+                                    </div>
+
+                                    <div class="latest-news">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-1.jpg">
+                                        </a>
+
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="latest-news">
+
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-1.jpg">
+                                        </a>
+
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="latest-news">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-1.jpg">
+                                        </a>
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="latest-news">
+                                        <a href="#">
+                                            <img src="assets/img/news-pic/grid-1.jpg">
+                                        </a>
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="how2 how2-cl4 flex-s-c">
+                                        <h3 class="f1-m-2 cl3 tab01-title">
+                                            Popular
+                                        </h3>
+                                        <a href="#">See-All</a>
+                                    </div>
+                                    <div class="popular-news">
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="popular-news">
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="popular-news">
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="popular-news">
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="popular-news">
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="popular-news">
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-news">
+                                        <div class="details">
+                                            <h3 class="head">
+                                                <a href="#">
+                                                    'Restoring political process': Modi to meet Jammu and Kashmir leaders on June 24
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="gallery">
+                        <div id="wrap" class="container">
+                            <div class="how2 how2-cl4 flex-s-c">
+                                <h3 class="f1-m-2 cl3 tab01-title">
+                                    Photo Gallery
+                                </h3>
+                                <a href="#">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-xl-8">
+
+                                    <!-- Carousel -->
+                                    <div id="carousel" class="carousel slide gallery" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div
+                                                class="carousel-item active"
+                                                data-slide-number="0"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/vbNTwfO9we0/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/vbNTwfO9we0/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="1"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/DEhwkPYevhE/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/DEhwkPYevhE/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="2"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/-RV5PjUDq9U/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/-RV5PjUDq9U/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="3"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/sd0rPap7Uus/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/sd0rPap7Uus/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="4"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/kmRZFcZEMY8/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/kmRZFcZEMY8/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="5"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/HJDdrWtlkIY/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/HJDdrWtlkIY/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="6"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/VfuJpt81JZo/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/VfuJpt81JZo/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="7"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/NLkXZQ7kHzI/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/NLkXZQ7kHzI/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="8"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/bl4WNYGe2KE/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/bl4WNYGe2KE/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="9"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/_8zfgT9kS2g/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/_8zfgT9kS2g/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="10"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/enuCEimS1p4/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/enuCEimS1p4/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div
+                                                class="carousel-item"
+                                                data-slide-number="11"
+                                                data-toggle="lightbox"
+                                                data-gallery="gallery"
+                                                data-remote="https://source.unsplash.com/hZDtZkdXtek/1600x900.jpg">
+                                                <img
+                                                    src="https://source.unsplash.com/hZDtZkdXtek/1600x900.jpg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                        </div>
+                                        <a
+                                            class="carousel-control-prev"
+                                            href="#carousel"
+                                            role="button"
+                                            data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a
+                                            class="carousel-control-next"
+                                            href="#carousel"
+                                            role="button"
+                                            data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                    </div>
+
+                                    <!-- Carousel Navigatiom -->
+                                    <div id="carousel-thumbs" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active" data-slide-number="0">
+                                                <div class="row mx-0">
+                                                    <div
+                                                        id="carousel-selector-0"
+                                                        class="thumb col-3 px-1 py-2 selected"
+                                                        data-target="#carousel"
+                                                        data-slide-to="0">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/vbNTwfO9we0/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-1"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="1">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/DEhwkPYevhE/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-2"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="2">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/-RV5PjUDq9U/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-3"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="3">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/sd0rPap7Uus/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item " data-slide-number="1">
+                                                <div class="row mx-0">
+                                                    <div
+                                                        id="carousel-selector-4"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="4">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/kmRZFcZEMY8/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-5"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="5">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/HJDdrWtlkIY/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-6"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="6">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/VfuJpt81JZo/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-7"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="7">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/NLkXZQ7kHzI/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item" data-slide-number="2">
+                                                <div class="row mx-0">
+                                                    <div
+                                                        id="carousel-selector-8"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="8">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/bl4WNYGe2KE/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-9"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="9">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/_8zfgT9kS2g/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-10"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="10">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/enuCEimS1p4/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        id="carousel-selector-11"
+                                                        class="thumb col-3 px-1 py-2"
+                                                        data-target="#carousel"
+                                                        data-slide-to="11">
+                                                        <div class="img-wrapper">
+                                                            <img
+                                                                src="https://source.unsplash.com/hZDtZkdXtek/1600x900.jpg"
+                                                                class="img-fluid"
+                                                                alt="...">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a
+                                            class="carousel-control-prev"
+                                            href="#carousel-thumbs"
+                                            role="button"
+                                            data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a
+                                            class="carousel-control-next"
+                                            href="#carousel-thumbs"
+                                            role="button"
+                                            data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4">
+                                    <div class="row">
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-1.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            15 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-2.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            16 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-2.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            16 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-2.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            16 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-3.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            17 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-4.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            18 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-5.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            19 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-6 col-lg-4 col-6">
+                                            <div class="daily-gallery">
+                                                <a href="#">
+                                                    <div class="img-wrapper">
+                                                        <img class="img-fluid" src="assets/img/news-pic/grid-6.jpg">
+                                                    </div>
+                                                    <div class="date">
+                                                        <a href="#">
+                                                            <i class="fas fa-camera"></i>
+                                                            20 June 2021
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="Asia-area">
+                        <div class="container">
+                            <div class="how2 how2-cl4 flex-s-c">
+                                <h3 class="f1-m-2 cl3 tab01-title asia-font">
+                                    Asia 360
+                                </h3>
+                                <a href="#">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="row grid-1">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-1.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-2.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-3.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-4.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                            <p class="info">The Sal forest in Tangail has been shrinking at a speedy rate
+                                                over the years, and there seems to be no way to prevent this...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="subscribtion-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="subscribe-1">
+                                        <a href="index.html">
+                                            <img class="img-fluid" src="assets/img/logo/logo.png">
+                                        </a>
+                                        <h3 class="header">POSTMAN24</h3>
+                                        <h4>
+                                            Subscribe</h4>
+                                        <p>
+                                            With the funding of more than 1.5 million readers in 180 countries, the Guardian
+                                            remains open to all and fiercely independent, and can continue chasing the
+                                            truth. Join us today by becoming a digital subscriber. No ads, no interruptions,
+                                            just quality news and analysis. You can help sustain our future.
+                                        </p>
+
+                                        <a class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Subscribe<i class="fas fa-angle-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-md-6 ">
+                                    <div class="subscribe-sub">
+                                        <a href="#">
+                                            <div class="img-wrapper">
+                                                <img class="img-fluid" src="assets/img/magazine/1.webp">
+                                            </div>
+                                            <p class="head">Read The PostMan Print</p>
+                                            <a href="#">
+                                                <p class="details">With the funding of more than 1.5 million readers in 180
+                                                    countries, the Guardian remains open to all and fiercely independent, and can
+                                                    continue chasing the truth. Join us today by becoming a digital subscriber.</p>
+                                            </a>
+                                            <a class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Subscribe<i class="fas fa-angle-right"></i>
+                                            </a>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 ">
+                                    <div class="subscribe-sub">
+                                        <a href="#">
+                                            <div class="img-wrapper">
+                                                <img class="img-fluid" src="assets/img/magazine/1.webp">
+                                            </div>
+                                            <p class="head">Read The PostMan Print</p>
+                                            <a href="#">
+                                                <p class="details">With the funding of more than 1.5 million readers in 180
+                                                    countries, the Guardian remains open to all and fiercely independent, and can
+                                                    continue chasing the truth. Join us today by becoming a digital subscriber.</p>
+                                            </a>
+                                            <a class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Subscribe<i class="fas fa-angle-right"></i>
+                                            </a>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="subscribe-sub">
+                                        <a href="#">
+                                            <div class="img-wrapper">
+                                                <img class="img-fluid" src="assets/img/magazine/1.webp">
+                                            </div>
+                                            <p class="head">Read The PostMan Print</p>
+                                            <a href="#">
+                                                <p class="details">With the funding of more than 1.5 million readers in 180
+                                                    countries, the Guardian remains open to all and fiercely independent, and can
+                                                    continue chasing the truth. Join us today by becoming a digital subscriber.</p>
+                                            </a>
+                                            <a class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Subscribe<i class="fas fa-angle-right"></i>
+                                            </a>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="cat-2">
+                        <div class="container">
+                            <div class="how2 how2-cl4 flex-s-c">
+                                <h3 class="f1-m-2 cl3 tab01-title">
+                                    Trending Topics
+                                </h3>
+                                <a href="#">See-All</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="bannar-side">
+                                        <div class="bannar-head">
+                                            <a href="#">
+                                                <div class="area-intro">
+                                                    <img src="assets/img/news-pic/grid-6.jpg">
+                                                    <h5>
+                                                        <a href="#">Technology</a>
+                                                    </h5>
+                                                </div>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="bannar-side">
+                                        <div class="bannar-head">
+                                            <a href="#">
+                                                <div class="area-intro">
+                                                    <img src="assets/img/news-pic/grid-6.jpg">
+                                                    <h5>
+                                                        <a href="#">Corona</a>
+                                                    </h5>
+                                                </div>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="bannar-side">
+                                        <div class="bannar-head">
+                                            <a href="#">
+                                                <div class="area-intro">
+                                                    <img src="assets/img/news-pic/grid-6.jpg">
+                                                    <h5>
+                                                        <a href="#">Politics</a>
+                                                    </h5>
+                                                </div>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="bannar-side">
+                                        <div class="bannar-head">
+                                            <a href="#">
+                                                <div class="area-intro">
+                                                    <img src="assets/img/news-pic/grid-6.jpg">
+                                                    <h5>
+                                                        <a href="#">Sports</a>
+                                                    </h5>
+                                                </div>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                        <div class="bannar-sub">
+                                            <h3>
+                                                <a href="#">Indian village prays to 'goddess corona' to rid them of the virus</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sponsor-content">
+                        <div class="container">
+                            <div class="how2 how2-cl4 flex-s-c">
+                                <h3 class="f1-m-2 cl3 tab01-title">
+                                    Sponsored Content
+                                </h3>
+                                <a href="#">About Sponsored Content</a>
+                            </div>
+                            <div class="row grid-1">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-1.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-2.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-3.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="grid-single">
+                                        <div class="img-wrapper">
+                                            <a href="#">
+                                                <img src="assets/img/news-pic/grid-4.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="news-details">
+                                            <h3>
+                                                <a href="#">Germany bounce back with statement 4-2 win over Portugal</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <!-- ======= Clients Section ======= -->
+                <section id="clients" class="clients spad">
+
+                    <div class="container" data-aos="fade-up">
+
+                        <div class="clients-slider swiper-container">
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo.png"></a>
+                                </div>
+                                <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                                <div class="footer-nl-area">
+                                    <form action="#" method="post">
+                                        <input
+                                            type="email"
+                                            name="nl-email"
+                                            class="form-control"
+                                            id="nlEmail"
+                                            placeholder="Your email">
+                                        <button type="submit">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="footer-social-area">
+                                    <a href="#" class="facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="google-plus">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                    <a href="#" class="instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="linkedin">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+
+                                <div class="copywrite">
+                                    <p>Copyright © 2021
+                                        <a href="index.html">POSTMAN24</a>. All Right Reserved.</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-9">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="footer-tile">
+                                            <h4>About</h4>
+                                        </div>
+
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="#">Who We Are</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">FAQ & Contact Form</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Our Staff</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Board of Directors</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Contributors' Guidelines</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Get Email Updates</a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="footer-tile">
+                                            <h4>Support</h4>
+                                        </div>
+
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="#" data-toggle="modal" data-target="#exampleModal">Become a Member</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Donate</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Gift a Membership</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">More Ways to Support</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="footer-tile">
+                                            <h4>The Postman 24</h4>
+                                        </div>
+
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="#">Who We Are</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">FAQ & Contact Form</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Our Staff</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Board of Directors</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Contributors' Guidelines</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Get Email Updates</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="footer-tile">
+                                            <h4>More</h4>
+                                        </div>
+
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="#">Who We Are</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">FAQ & Contact Form</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Our Staff</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Board of Directors</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Contributors' Guidelines</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Get Email Updates</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mini-footer">
+                                    <span>
+                                        Made With
+                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                        &amp; Powered By
+                                        <a href="https://technohaat.com">Technohaat IT LTD</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- model -->
+                <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+                        <div class="modal-content bg-blue1">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Subscription form</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row form-group">
+                                        <div class="col-md-6 col-12 mb-3 mb-lg-0">
+                                            <input type="text" class="form-control" placeholder="First name">
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Phone">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="index.html" class="btn btn-info">Subscribe<i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup" id="popup">
+                    <div class="contentBox">
+                        <div class="head">
+                            <p class="title">Are you happy to accept cookies?</p>
+
+                            <p>To manage your cookie choices now, including how to opt out where our
+                                partners rely on legitimate interests to use your information,
+                                <strong>click on Manage my cookies.</strong>
+                            </p>
+
+                        </div>
+                        <div class="d-flex ">
+                            <a href="#" class="button">Yes, I am happy</a>
+                            <a href="#" class="button">Manage my cookies</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="add-pop" id="addpop">
+                    <div class="cross"><i class="fas fa-times-circle"></i></div>
+                    <img src="assets/img/postman24.jpg">
+
+                </div>
+                <!--  -->
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="assets/vendors/js/jquery-3.3.1.slim.min.js"></script>
+                <script src="assets/vendors/js/jquery-1.12.4.min.js"></script>
+                <script src="assets/vendors/js/popper.min.js"></script>
+                <!-- animate -->
+                <script src="assets/vendors/js/animated.headline.js"></script>
+                <!-- swap -->
+                <script src="assets/vendors/js/swiper-bundle.min.js"></script>
+                <!-- ticker -->
+                <script src="assets/vendors/js/jquery.ticker.js"></script>
+                <!-- slike -->
+                <script src="assets/vendors/js/slick.min.js"></script>
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+                <script src="assets/vendors/js/bootstrap.min.js"></script>
+                <script src="assets/vendors/js/main.js"></script>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $('#js-news').ticker();
+                    });
+                </script>
+
+                <script type="text/javascript"></script>
+                <script>
+                    (function (d, s, id) {
+                        var js,
+                            fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) 
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                        fjs
+                            .parentNode
+                            .insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+            </body>
+        </html>
